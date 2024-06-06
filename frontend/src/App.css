@@ -1,15 +1,10 @@
 body {
-  /* Set background properties */
-  background-size: cover; /* Cover the entire container */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Do not repeat the background image */
-
-  /* Ensure the background image remains fixed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  
-  /* Set dimensions and other styles for the container */
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   font-family: Arial, sans-serif;
   background-image: url(https://mistindore.com/assets/images/slider-1.jpg);
   color: #fff;
@@ -17,12 +12,13 @@ body {
 
 .App {
   text-align: center;
-  margin: 200px;
-  margin-top: 0px;
+  margin: 20px;
+  margin-top: 0;
+  padding: 20px;
 }
 
 .App-header {
-  margin: 2rem;
+  margin: 2rem 1rem;
 }
 
 h1 {
@@ -41,7 +37,8 @@ h1 {
   backdrop-filter: blur(10px);
   border-radius: 8px;
   padding: 1rem;
-  width: 300px;
+  max-width: 300px; /* Set a maximum width for the cards */
+  width: 100%; /* Allow the card to take full width up to max-width */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -53,22 +50,64 @@ h1 {
 .card p {
   font-size: 0.875rem;
 }
-.team{
-  padding:100px;
+
+.team {
+  padding: 50px 10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: end;
   gap: 1rem;
 }
 
-img{
-  width: 300px;
-  height: 150px;
+img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   border-radius: 50%;
   margin-bottom: 1rem;
-
 }
 
-p,ul{
+p, ul {
   font-size: 17px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .App {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .App-header {
+    margin: 1rem;
+  }
+
+  .team {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%; /* Adjust max-width for smaller screens */
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  .card {
+    max-width: 100%;
+    margin: 0.5rem;
+  }
+
+  .card p {
+    font-size: 0.75rem;
+  }
 }

@@ -46,9 +46,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img alt="logo of mist" src="/CollegeLogo.png"></img>
-        <h1>Analysis Design of Algorithm Practical</h1>
+        <h1>4th Semester Practical</h1>
         <p className="descriptionofproject">
-          For our Analysis and Design of Algorithm practical, our team developed
+          For our last practical, our team developed
           a user-friendly website designed to act as a centralized hub for
           important resources and links. The primary feature of the website is a
           set of buttons, each of which redirects users to various essential
